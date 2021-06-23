@@ -36,6 +36,7 @@ import java.util.List;
 public class Utils extends BasePage {
 
     Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
     //method for clickOnElement
     public static void clickOnElement (By by)
     {

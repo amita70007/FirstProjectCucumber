@@ -17,12 +17,12 @@ public class NewOnlineStore extends Utils {
 
     public void enterComment() throws InterruptedException, IOException {
         readProperty();
-        title_new = title;
+        title_new = title+dateStamp();
         comment_new = comment;
         clickOnElement(By.xpath("//a[normalize-space()='New online store is open!']"));
         Thread.sleep(2000);
         waitForClickable(By.className("enter-comment-title"),5000);
-        enterText(By.className("enter-comment-title"), title);
+        enterText(By.className("enter-comment-title"), title_new);
         waitForClickable(By.className("enter-comment-text"),5000);
         enterText(By.className("enter-comment-text"),comment);
         waitForClickable(By.cssSelector("button[name='add-comment']"),5000);

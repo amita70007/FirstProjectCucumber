@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"classpath:features/registration.feature"},
-        glue = {"com.examples.cucumber"})
+        features = ".", tags="@test1,@test2,@test3",format = {"pretty","html:target/Destination"}
+        )
 
 public class RunTest {
 }
